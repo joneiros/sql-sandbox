@@ -1,4 +1,5 @@
 # Write your MySQL query statement below
+
 SELECT
     pr.product_name,
     SUM(o.unit) as unit
@@ -12,3 +13,6 @@ GROUP BY
     pr.product_id
 HAVING
     SUM(o.unit) >= 100;
+
+# a better WHERE would have been where o.order_Date between '2020-02-01' and '2020-02-29'
+
